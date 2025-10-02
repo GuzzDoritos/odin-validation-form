@@ -1,0 +1,51 @@
+Form 
+- novalidate attribute
+
+Form input elements
+- Email
+    - Required field
+    - Should check if it fits the format "name@example.com"
+- Country
+    - Required field
+- Postal code
+    - Only numbers (type="number")
+    - Must fit a format??? I don't know, since it varies between countries (maybe just pick one and use regex)
+- Password
+    - Must be at least 10 characters long
+    - must have at least 3 special characters
+    - should have uppercase and lowercase words
+- Confirm Password
+
+-- validator.js --
+
+Houses the Validator class and its methods
+Each method should probably return a string with the error.
+
+export default class Validator {
+    validateEmail(email) {
+        // validate input value
+    }
+
+    validateCountry(country) {
+        // validate input value
+    }
+
+    validatePostalCode(postalCode) {
+        // validate input value
+    }
+
+    validatePassword(password) {
+        // validate input value
+    }
+}
+
+-- bindEvents.js --
+
+Bind events to the input elements, so they validate on each type, calling the appropriate show error function.
+    - import validator.js
+    - set a Validator instance to a variable
+    - run appropriate methods for each input
+
+-- showError.js --
+
+houses the showError() function, that takes in a string (the error message), and then updates the error span element right after the input element.
