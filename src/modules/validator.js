@@ -1,4 +1,9 @@
+/**
+ * Interface for validating form inputs
+ */
 export default class Validator {
+
+
     validateEmail(string) {
 
     }
@@ -16,6 +21,6 @@ export default class Validator {
     }
 
     confirmPassword(pswd, string) {
-        
+
     }
 }
